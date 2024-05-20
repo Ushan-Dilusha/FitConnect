@@ -1,0 +1,27 @@
+# Google OAuth2 Client Configuration
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1055795963699-a7ns3flfs8f9osgs8063lp8c5kfqedak.apps.googleusercontent.com
+            client-secret: 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
+            scope: profile,email
+            redirect-uri: '{baseUrl}/login/oauth2/code/{registrationId}'
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://accounts.google.com/o/oauth2/token
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
+            user-name-attribute: name
+
+#  server:
+#    servlet:
+#      context-path: /api
+
+# MongoDB Configuration
+  data:
+    mongodb:
+      uri: mongodb+srv://ushandilusha10:coolpixl320@paf.zejmd5b.mongodb.net/?retryWrites=true&w=majority&appName=PAF
+      database: PAF
